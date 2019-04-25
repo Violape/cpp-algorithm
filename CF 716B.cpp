@@ -62,7 +62,10 @@ int main() {
 		if (flag) {
 			for (int j = 0; j < i; j++) {
 				char o = a.operator[](j);
-				cout << o;
+				if (o == '?')
+					cout << 'A';
+				else
+					cout << o;
 			}
 			int cnt = 0;
 			for (int j = 0; j < 26; j++) {
@@ -83,7 +86,10 @@ int main() {
 			}
 			for (int j = i + 26; j < n; j++) {
 				char o = a.operator[](j);
-				cout << o;
+				if (o == '?')
+					cout << 'A';
+				else
+					cout << o;
 			}
 			cout << endl;
 			fc = 0;
