@@ -29,9 +29,7 @@
 	Output:MNBVCXZLKJHGFDSAQPWOEIRUYT
 	Input:AABCDEFGHIJKLMNOPQRSTUVW??M
 	Output:-1
-  
 */
-
 #include <iostream>
 #include <string>
 using namespace std;
@@ -62,6 +60,10 @@ int main() {
 			}
 		}
 		if (flag) {
+			for (int j = 0; j < i; j++) {
+				char o = a.operator[](j);
+				cout << o;
+			}
 			int cnt = 0;
 			for (int j = 0; j < 26; j++) {
 				char o = a.operator[](i + j);
@@ -78,6 +80,10 @@ int main() {
 				else {
 					cout << o;
 				}
+			}
+			for (int j = i + 26; j < n; j++) {
+				char o = a.operator[](j);
+				cout << o;
 			}
 			cout << endl;
 			fc = 0;
